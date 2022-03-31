@@ -20,6 +20,17 @@
   <title>Portfolio | Todi Rahmat</title>
 </head>
 <body id="home">
+  
+  <!-- Spinner start -->
+  <div class="preloader">
+    <div class="loading">
+      <div class="spinner-grow text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </div>
+  <!-- Spinner end -->
+
   <!-- Navbar start -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
     <div class="container">
@@ -182,13 +193,23 @@
       d="M0,224L30,192C60,160,120,96,180,101.3C240,107,300,181,360,192C420,203,480,149,540,149.3C600,149,660,203,720,213.3C780,224,840,192,900,181.3C960,171,1020,181,1080,197.3C1140,213,1200,235,1260,218.7C1320,203,1380,149,1410,122.7L1440,96L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
       ></path>
     </svg>
-    <p>Create with <i class="bi bi-heart-fill text-danger"></i> by <a class="text-white fw-bold" href="https://github.com/todikun/" target="_blank">Todi Rahmat</a></p>
+    <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a class="text-white fw-bold" href="https://github.com/todikun/" target="_blank">Todi Rahmat</a></p>
   </footer>
   <!-- Footer end -->
 
   <!-- JS Script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+  <!-- Preloader animation start -->
+  <script>
+    $(document).ready(function() {
+      $(".preloader").fadeOut("slow");
+    });
+  </script>
+  <!-- Preloader animation end -->
+
+  <!-- AOS start -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     const projectImage = document.querySelectorAll('.project-img');
@@ -204,7 +225,9 @@
       duration: 2000,
     });
   </script>
+  <!-- AOS end -->
 
+  <!-- GSAP start -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/TextPlugin.min.js"></script>
   <script>
@@ -214,6 +237,7 @@
     gsap.from('.navbar', { duration: 1.5, y: -100, opacity: 0, ease: 'bounce' });
     gsap.from('.display-4', { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: 'back' });
   </script>
+  <!-- GSAP end -->
 
   <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwTekUyUaDAvdpiebfzIwFloVDvvefj_G1126CFIoyozpFSl_Yuv_gk9aqeDcxB5Vy-/exec'
